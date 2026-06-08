@@ -38,19 +38,37 @@ The goal is not to replace official advising, but to make scattered student know
 
 # Chunking Strategy
 
-Chunk Size: 100 words
+Chunk Size: 200 words
 
-Overlap: 20 words
+Overlap: 50 words
 
 ### Why These Choices Fit My Documents
 
-Most of my source documents are short student reviews, Reddit comments, or Quora answers. A 100-word chunk is large enough to preserve context while remaining small enough to isolate specific advice about a professor or course.
+Most of my source documents are short professor reviews, Reddit discussions,
 
-Initially, I used 300-word chunks with 50-word overlap. However, after running ingestion on the corpus, only about 20 chunks were produced. This created poor retrieval because each chunk contained too many unrelated topics.
+and Quora responses. A 200-word chunk is large enough to preserve context
 
-Reducing the chunk size to 100 words produced significantly more retrieval candidates while preserving context.
+across multiple reviews while remaining small enough to isolate information
 
-The 20-word overlap helps maintain continuity when information spans chunk boundaries without introducing excessive redundancy.
+about a specific professor, course, or topic.
+
+I originally experimented with 300-word chunks and 50-word overlap. That
+
+produced only 18 chunks across the corpus, which reduced retrieval quality
+
+because each chunk contained too many unrelated ideas.
+
+Reducing the chunk size to 200 words increased the corpus to 31 chunks,
+
+providing more retrieval candidates while still preserving context.
+
+The 50-word overlap helps maintain continuity when information spans chunk
+
+boundaries and reduces the chance of losing important context.
+
+Final Chunk Count
+
+31 chunks across 10 source documents.
 
 ### Final Chunk Count
 
