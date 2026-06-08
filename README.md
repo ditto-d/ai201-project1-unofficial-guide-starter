@@ -5,9 +5,12 @@
 
 # Domain
 
-CCNY students rely on two very different sources of information when making academic decisions. The official sources include department websites, degree requirements, and course catalogs. The unofficial sources include Rate My Professors reviews, Reddit discussions, Quora posts, Discord conversations, and advice passed between students.
+CCNY students rely on two very different sources of information when making academic decisions. The official sources include 
+department websites, degree requirements, and course catalogs. The unofficial sources include Rate My Professors reviews,
+Reddit discussions, Quora posts, Discord conversations, and advice passed between students.
 
-This project makes that unofficial knowledge searchable through Retrieval-Augmented Generation (RAG). Students can ask natural language questions such as:
+This project makes that unofficial knowledge searchable through Retrieval-Augmented Generation (RAG). Students can ask 
+natural language questions such as:
 
 - "How do I do well in Troeger's class?"
 - "Does Skeith curve exams?"
@@ -53,35 +56,33 @@ to 200 words increased the corpus to 31 chunks, providing more retrieval candida
 context. The 50-word overlap helps maintain continuity when information spans chunk boundaries and reduces 
 the chance of losing important context.
 
-Final Chunk Count
-
-31 chunks across 10 source documents.
 
 ### Final Chunk Count
 
-57 chunks across 10 source documents.
+31 chunks across 10 source documents.
 
 ---
 
 # Sample Chunks
 
-### Sample Chunk 1 — grossberg_rmp.txt
+### Sample Chunk 1: grossberg_rmp.txt
 
-Rate My Professors: Michael Grossberg - Computer Science, City College of New York. Student review discussing unreasonable workload, delayed grading, and quizzes being assigned during the final week.
+Rate My Professors: Michael Grossberg - Computer Science, City College of New York. Student review discussing unreasonable 
+workload, delayed grading, and quizzes being assigned during the final week.
 
-### Sample Chunk 2 — troeger_rmp.txt
+### Sample Chunk 2: troeger_rmp.txt
 
 Student review describing CSC 335 as one of the hardest courses in the curriculum, with exam averages around 20% and significant workload expectations.
 
-### Sample Chunk 3 — skeith_rmp.txt
+### Sample Chunk 3: skeith_rmp.txt
 
 Student review stating that Professor Skeith is tough but fair and gives significant curves that help final grades.
 
-### Sample Chunk 4 — reddit_ccny_cs.txt
+### Sample Chunk 4: reddit_ccny_cs.txt
 
 Discussion of professor quality across CCNY CS courses, highlighting differences between lower-level and upper-level classes.
 
-### Sample Chunk 5 — ccny_catalog.txt
+### Sample Chunk 5: ccny_catalog.txt
 
 Official curriculum listing required courses including Data Structures, Algorithms, Operating Systems, Software Engineering, and Database Systems.
 
@@ -170,7 +171,10 @@ The retrieved chunks discuss course rigor, grading expectations, workload, and s
 
 The model is instructed:
 
-"Answer questions about professors, courses, and workload based ONLY on the student reviews and course information provided below. Do not use any outside knowledge. When you use information from a source, cite it as [Source N]. If the provided context does not contain enough information to answer the question, say exactly: 'I don't have enough information in my sources to answer that question.'"
+"Answer questions about professors, courses, and workload based ONLY on the student reviews and course information provided
+below. Do not use any outside knowledge. When you use information from a source, cite it as [Source N]. If the provided
+context does not contain enough information to answer the question, say exactly: 'I don't have enough information in my s
+ources to answer that question.'"
 
 The generation model is:
 
@@ -214,7 +218,8 @@ How do I do well in Troeger's class?
 
 ### Response
 
-Students recommend understanding all material before each midterm, attending weekend office hours, avoiding syntax mistakes on exams, and carefully completing homework because exam questions are often similar [Source 1][Source 2].
+Students recommend understanding all material before each midterm, attending weekend office hours, avoiding syntax 
+mistakes on exams, and carefully completing homework because exam questions are often similar [Source 1][Source 2].
 
 Sources:
 Source 1, Source 2 → troeger_rmp.txt
@@ -245,11 +250,15 @@ The system provides a Gradio web interface.
 
 ### Outputs
 
-- Grounded answer
+- Grounded answer generated from retrieved context
 - Inline source citations
-- Source legend
-- Raw retrieved chunks
-
+- Source legend mapping citations to documents
+- Retrieval inspection view showing:
+  - retrieved chunks
+  - similarity scores
+  - source filenames
+  - chunk IDs
+  
 ### Sample Interaction
 
 User:
@@ -295,7 +304,9 @@ The answer focused on workload and grading delays rather than exam-specific info
 
 This failure originated in the retrieval stage.
 
-The Grossberg document contains relatively few reviews and very little discussion of exam structure. Meanwhile, Troeger reviews contain many references to exams. Because the embedding model focuses on semantic similarity, exam-related Troeger chunks were often ranked above Grossberg chunks.
+The Grossberg document contains relatively few reviews and very little discussion of exam structure. Meanwhile,
+Troeger reviews contain many references to exams. Because the embedding model focuses on semantic similarity,
+exam-related Troeger chunks were often ranked above Grossberg chunks.
 
 ### What I Would Change
 
@@ -313,42 +324,53 @@ This would improve entity-specific retrieval.
 
 ### One Way the Spec Helped Me
 
-The planning document forced me to define evaluation questions before implementation. This made it easier to identify retrieval failures because I already knew what the correct answer should look like.
+The planning document forced me to define evaluation questions before implementation. This made it easier to identify 
+retrieval failures because I already knew what the correct answer should look like.
 
 ### One Way My Implementation Diverged
 
-My original plan used 300-word chunks with 50-word overlap. After testing on the actual corpus, this produced too few chunks and weak retrieval performance. I reduced the chunk size to 100 words and overlap to 20 words to better match the document collection.
+My original plan used 300-word chunks with 50-word overlap. After testing on the actual corpus, this produced too few chunks and weak
+retrieval performance. I reduced the chunk size to 200 words and overlap to 50 words to better match the document collection.
 
 ---
 
-# AI Usage
+## AI Usage
 
-## Instance 1
+### Instance 1
 
-### What I Gave the AI
+What I gave the AI
 
-A description of my documents, chunking strategy, and ingestion requirements.
+I described my document corpus (Rate My Professors reviews, Reddit discussions, Quora posts, and CCNY department pages) and 
+explained that I needed an ingestion pipeline that could clean text, chunk documents, and prepare them for embedding.
 
-### What It Produced
+What it produced
 
-An initial version of ingest.py.
+The AI generated an initial version of ingest.py that loaded text files, cleaned basic formatting issues, and split documents into chunks.
 
-### What I Changed
+What I changed or overrode
 
-I replaced character-based chunking with word-based chunking and added chunk validation checks.
+After testing on my corpus, I determined that the generated chunking strategy was not appropriate for short student reviews.
+I modified the implementation to use word-based chunking, experimented with different chunk sizes and overlaps, and added chunk 
+validation checks to detect fragments, HTML artifacts, and boilerplate text. I also ran multiple ingestion diagnostics and 
+adjusted the chunking parameters based on retrieval performance rather than simply accepting the initial implementation.
 
 ---
 
-## Instance 2
+### Instance 2
 
-### What I Gave the AI
+What I gave the AI
 
-My retrieval pipeline specification using ChromaDB and all-MiniLM-L6-v2 embeddings.
+I provided my retrieval design from planning.md, including the use of ChromaDB, the all-MiniLM-L6-v2 embedding model,
+cosine similarity search, and the requirement that answers be traceable back to source documents.
 
-### What It Produced
+What it produced
 
-An initial implementation of embed.py and retrieval logic.
+The AI generated an initial implementation of the embedding and retrieval pipeline using SentenceTransformers and ChromaDB.
 
-### What I Changed
+What I changed or overrode
 
-I added source metadata, chunk identifiers, batching during embedding, and retrieval score adjustments for professor-specific queries. These changes improved source attribution and retrieval quality.
+I extended the implementation by adding source metadata (source and chunk_id) to every stored chunk so responses could be 
+traced back to specific documents. After evaluating retrieval quality, I observed that professor-specific queries sometimes
+retrieved chunks about different professors. To improve results, I implemented professor-name score boosting and modified 
+the ranking logic. I also tested retrieval using multiple evaluation queries and adjusted the system based on observed 
+failures rather than relying solely on the generated code.
