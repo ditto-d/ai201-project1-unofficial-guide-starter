@@ -261,13 +261,9 @@ The system provides a Gradio web interface.
   
 ### Sample Interaction
 
-User:
+User: Does Skeith curve his exams?
 
-Does Skeith curve his exams?
-
-System:
-
-Yes. Student reviews indicate that Skeith gives significant curves on exams [Source 1].
+System: Yes. Student reviews indicate that Skeith gives significant curves on exams [Source 1].
 
 Sources:
 Source 1 → skeith_rmp.txt
