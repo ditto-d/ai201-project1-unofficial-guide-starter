@@ -125,51 +125,84 @@ The tradeoff is between accuracy, speed, memory usage, and operating cost.
 
 Michael Grossberg lectures
 
-### Top Returned Chunks
+Top Returned Chunks
 
-1. grossberg_rmp.txt
-2. grossberg_rmp.txt
-3. rmp_ccny_general.txt
+1. grossberg_rmp.txt (chunk 0)
 
-### Why Relevant
+“Overall Quality: 3.6/5, Would take again: 72%. Student reviews describe Grossberg as intellectual, engaging, and 
+lecture-focused.”
 
-The first two chunks come directly from Grossberg reviews and discuss his teaching style, lectures, and student experiences.
+2. rmp_ccny_general.txt (chunk 0)
 
----
+“Students most commonly praise professors who give clear explanations, provide fair and curved exams, keep organized course
+materials, and are accessible outside class hours.”
+
+3. grossberg_rmp.txt (chunk 1)
+
+“Such an excellent professor. He is very intellectual and knows how to joke as well. His class was hard, but it taught me
+a lot. Amazing lectures, Inspirational, Hilarious.”
+
+Why Relevant
+
+The top retrieved chunks come directly from Grossberg reviews and discuss his lecture quality, teaching style, and student 
+experiences. The retrieval correctly identified documents focused on Grossberg rather than unrelated professors.
+
+⸻
 
 ## Query 2
 
-### Query
+## Query
 
 Douglas Troeger exams
 
-### Top Returned Chunks
+Top Returned Chunks
 
-1. troeger_rmp.txt
-2. troeger_rmp.txt
-3. skeith_rmp.txt
+1. troeger_rmp.txt (chunk 1)
 
-### Why Relevant
+“Making syntax errors on exams can significantly impact grades. Student reviews note that Troeger provides hints about 
+exam questions and that some exam questions are similar to homework problems.”
 
-The top two chunks specifically discuss Troeger's exams, grading style, office hours, and workload.
+2. troeger_rmp.txt (chunk 0)
 
----
+“Overall Quality: 1.9/5, Would take again: 11%, Difficulty: 4.7.”
+
+3. rmp_ccny_general.txt (chunk 0)
+
+“Douglas Troeger - Overall Quality 1.9, Difficulty 4.7.”
+
+Why Relevant
+
+The first retrieved chunk directly discusses Troeger’s exam style, grading expectations, and preparation strategies.
+The remaining chunks provide supporting information about perceived course difficulty and student ratings.
+
+⸻
 
 ## Query 3
 
-### Query
+## Query
 
 What is the workload like for CCNY computer science courses?
 
-### Top Returned Chunks
+Top Returned Chunks
 
-1. reddit_ccny_cs.txt
-2. reddit_ccny_cs.txt
-3. quora_ccny_cs.txt
+1. ccny_catalog.txt (chunk 0)
 
-### Why Relevant
+“Computer scientists must acquire expertise in theory of computation, algorithms and data structures, programming 
+methodology and languages, communications and security, and computer systems and architecture.”
 
-The retrieved chunks discuss course rigor, grading expectations, workload, and student experiences throughout the CS program.
+2. quora_ccny_cs.txt (chunk 0)
+
+“The program was not always an easy learning experience and required significant independent effort from students.”
+
+3. reddit_ccny_cs.txt (chunk 0)
+
+“From my experience, it’s all about picking the right professor. STEM major courses are different and can involve a 
+substantial workload.”
+
+Why Relevant
+
+The retrieved chunks discuss the breadth of required coursework, the rigor of the program, and student experiences with
+workload and professor quality. Together they provide useful context about the demands of the CCNY Computer Science curriculum.
 
 ---
 
@@ -303,7 +336,9 @@ What do students say about Professor Grossberg's exams?
 
 ### What The System Returned
 
-The answer focused on workload and grading delays rather than exam-specific information.
+The Grossberg reviews contained limited information about exam structure.
+As a result, the system retrieved relevant Grossberg reviews but generated an answer focused on workload,
+grading delays, and course management rather than exam-specific details.
 
 ### Root Cause
 
