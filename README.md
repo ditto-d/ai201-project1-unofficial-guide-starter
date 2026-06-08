@@ -65,26 +65,34 @@ the chance of losing important context.
 
 # Sample Chunks
 
-### Sample Chunk 1: grossberg_rmp.txt
+### Sample Chunk 1: ccny_catalog.txt (chunk 0)
 
-Rate My Professors: Michael Grossberg - Computer Science, City College of New York. Student review discussing unreasonable 
-workload, delayed grading, and quizzes being assigned during the final week.
+"CCNY Computer Science Undergraduate Curriculum - Bachelor of Science...
+Program Outcomes: Upon graduation, students are expected to have an ability to analyze a complex computing problem and 
+apply principles of computing to identify solutions."
 
-### Sample Chunk 2: troeger_rmp.txt
+### Sample Chunk 2: grossberg_rmp.txt (chunk 0)
 
-Student review describing CSC 335 as one of the hardest courses in the curriculum, with exam averages around 20% and significant workload expectations.
+"Student Review - Quality 1.0, Difficulty 3.0...
+Unreasonable workload... Never graded anything, including the midterm, until grades were due...
 
-### Sample Chunk 3: skeith_rmp.txt
+Student Review - Quality 5.0, Difficulty 3.0...
+Such an excellent professor! He is very intellectual and knows how to joke as well."
 
-Student review stating that Professor Skeith is tough but fair and gives significant curves that help final grades.
+### Sample Chunk 3: reddit_ccny_bad.txt (chunk 3)
 
-### Sample Chunk 4: reddit_ccny_cs.txt
+"It's the professors who make it difficult if you got the bad one and the good professors' classes fill up quickly. I 
+recommend always checking who's teaching and see the reviews on RateMyProfessor."
 
-Discussion of professor quality across CCNY CS courses, highlighting differences between lower-level and upper-level classes.
+### Sample Chunk 4: rmp_ccny_general.txt (chunk 0)
 
-### Sample Chunk 5: ccny_catalog.txt
+"Students most commonly praise professors who give clear explanations, provide fair and curved exams, keep organized 
+course materials, and are accessible outside class hours."
 
-Official curriculum listing required courses including Data Structures, Algorithms, Operating Systems, Software Engineering, and Database Systems.
+### Sample Chunk 5: troeger_rmp.txt (chunk 2)
+
+"Averages were around 20%. Most students take him twice - first time to understand, second time to pass. Also, a 
+GPA killer... The exams are brutal and graded very strictly."
 
 ---
 
@@ -189,7 +197,8 @@ Source attribution is enforced in two ways:
 1. The prompt instructs the model to cite sources inline.
 2. The application automatically appends a source legend showing which documents correspond to each citation.
 
-This ensures source attribution remains visible even if the model produces an incomplete citation.
+The application also includes a retrieval inspection interface that displays the top retrieved chunks, similarity scores, 
+source files, and chunk IDs before generation, allowing retrieval quality to be evaluated independently from the LLM response.
 
 ---
 
@@ -257,7 +266,7 @@ The system provides a Gradio web interface.
   - retrieved chunks
   - similarity scores
   - source filenames
-  - chunk IDs
+
   
 ### Sample Interaction
 
