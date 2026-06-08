@@ -1,0 +1,31 @@
+Rate My Professors: William Skeith — Computer Science, City College of New York
+
+Overall Quality: 3.8 / 5 (based on 131 ratings)
+Would take again: 72%
+Level of Difficulty: 3.9
+
+Rating distribution: Awesome (5 stars): 61, Great (4 stars): 25, Good (3 stars): 20, OK (2 stars): 10, Awful (1 star): 15
+
+Student Review — Quality 5.0, Difficulty 2.0, Course: CSC10300, Dec 2025:
+Good lectures but really hard exams. He curves. Also he doesn't post any grade till the end of the semester and he makes it annoying to get your grade — you have to run a shell file with a receipt to get it. Tags: Lots of homework, Accessible outside class.
+
+Student Review — Quality 5.0, Difficulty 3.0, Course: CSC103, May 2025:
+He really just wants you to try the codes on your own and not use AI. He will definitely catch you. He wouldn't even mind if the codes are half-done, he is kind enough to give credits when he knows you are trying. Tags: Get ready to read, Amazing lectures, Caring.
+
+Student Review — Quality 2.0, Difficulty 4.0, Course: CSC10300, Jan 2025:
+A complete beginner can't understand him, he uses C++. Learn these beforehand to get an A: Onlinegdb for testing code, BroCode's 6-hour C++ crash course (this is a gem), if and else statements, functions, while and for loops, linked lists, recursion. Lastly, he will take care of the rest with his amazing exam curves. Tags: Lots of homework, Graded by few things, Accessible outside class.
+
+Student Review — Quality 5.0, Difficulty 5.0, Course: CSC103, Dec 2024:
+Good prof, good exam curves. Tags: Get ready to read, Test heavy, Online Savvy.
+
+Student Review — Quality 5.0, Difficulty 4.0, Course: CSC103, Dec 2024:
+Wes is a great professor — he's knowledgeable and helpful, but the class can be challenging if you don't have prior C++ experience. Engage with the material and use resources like unstuck AI, and you'll learn a lot.
+
+Student Review — Quality 4.0, Difficulty 4.0, Course: CSC10300, older:
+Professor Skeith is tough but fair. The exams are hard but he gives significant curves so the grades work out. Go to office hours early and often — he's very helpful in person. His programming assignments are challenging but you learn a lot.
+
+Student Review — Quality 3.0, Difficulty 4.0, Course: CSC10300, older:
+The course is taught in C++ which is unusual for an intro course. If you have zero programming experience you will struggle at first. However Skeith is patient and the curve on exams is generous. By the end of the semester I felt like I had actually learned to program properly. Recommend pairing with online resources from the start.
+
+Student Review — Quality 5.0, Difficulty 3.0, Course: CSC103, older:
+One of the best professors in the CS department. He actually cares if you learn. His lectures are dense but he posts good notes. The final is cumulative but he provides practice problems that closely match the exam format. Do the homework even if it's not graded.

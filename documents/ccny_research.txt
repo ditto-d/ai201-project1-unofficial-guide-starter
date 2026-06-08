@@ -1,0 +1,19 @@
+CCNY Computer Science Department Research
+
+Computing is at the core of most sciences, and its applications affect virtually all areas of everyday life. Research in computer science is a continuous exploration for more efficient mathematical processes that require less space, and which accommodate and give rise to future systems. The research profile of the department includes sponsorship of CAISS, the Center for Algorithms and Interactive Scientific Software.
+
+Algorithms: Computational Geometry (Peter Brass), Data Structure (Peter Brass)
+Computer Security: Cryptography (Nelly Fazio, William Skeith), Information Assurance (Kaliappa Ravindran, Nelly Fazio), Systems Security (Izidor Gertner, Nelly Fazio)
+Computing Systems: Automatic Target Recognition (Izidor Gertner), Computer Networks (Kaliappa Ravindran), Database Systems (Akira Kawaguchi, Jianting Zhang)
+Cryptography: Applied Cryptography (Nelly Fazio), Foundations of Cryptography (Nelly Fazio, William Skeith)
+Multimedia Computing: Computer Graphics (George Wolberg, Michael Grossberg), Computer Vision (Jie Wei, Zhigang Zhu, Michael Grossberg), Image Processing (Jie Wei, George Wolberg, Zhigang Zhu, Michael Grossberg)
+Programming and Programming Languages: Programming Language Semantics (Douglas Troeger), Functional Programming (Douglas Troeger)
+Theoretical Computer Science: Computational Group Theory (Douglas Troeger), Parallel and Distributed Computation (Devendra Kumar, Kaliappa Ravindran)
+
+Michael Grossberg: My research subject is computer vision and more broadly sensing visual information. Visual information is central to a growing number of applications from monitoring the earth's environment from satellites, to uncovering the structure of the brain with MRI. My focus is to use physically accurate models of the sensing process to better interpret and manipulate visual information. I am investigating improved sensing strategies and sensor design, including using active illumination such as projectors.
+
+William Skeith: My research interests are primarily in cryptography: in particular, private information retrieval and computing on encrypted data. I'm especially interested in the algebraic aspects of private computation and in communication complexity lower bounds for such protocols.
+
+Douglas Troeger: My present work has as its main goal the understanding of methods by which algebraic manipulations of indefinite objects can be automated. This work is supported by an NSF grant, under the auspices of the Center for Algorithms and Interactive Scientific Software of City College.
+
+Izidor Gertner: My research interests are in the areas of Automatic Target Recognition, Time-Frequency Analysis, Hardware/Software co-design of real-time algorithms, Evolutionary Algorithms, Semantic Web.

@@ -1,0 +1,31 @@
+Rate My Professors: Douglas Troeger — Computer Science, City College of New York
+
+Overall Quality: 1.9 / 5 (based on 169 ratings)
+Would take again: 11%
+Level of Difficulty: 4.7
+
+Rating distribution: Awesome (5 stars): 15, Great (4 stars): 10, Good (3 stars): 20, OK (2 stars): 26, Awful (1 star): 98
+
+Student Review — Quality 2.0, Difficulty 5.0, Course: CSC335, May 2026:
+You need to be prepared for this course. Before each midterm, you should clearly understand everything he has taught up to that point; otherwise, you're going to have a hard time. Tags: Tough grader, Lecture heavy, Test heavy.
+
+Student Review — Quality 1.0, Difficulty 5.0, Course: CS335, May 2026:
+Attendance is mandatory. Very difficult course. So many papers to read. Get ready to read. Tags: Tough grader, Get ready to read, So many papers.
+
+Student Review — Quality 1.0, Difficulty 5.0, Course: 335, May 2026:
+Writing comments and not making any syntax errors on exams is a must for passing. He also drops hints on what questions might look like. His questions sometimes come directly from the homework. He doesn't care what else you got going on in your life. He hosts office hours on weekends leading up to exams. Lessen your workload while taking his class. Tags: Tough grader.
+
+Student Review — Quality 1.0, Difficulty 5.0, Course: 335, May 2026:
+The course itself is very insightful, and I'd argue Troeger plays a part of that. But you're graded on like two questions with absolutely no room for error. You have to be PERFECT, or else you get little to no points. Tags: Tough grader, Test heavy, Graded by few things.
+
+Student Review — Quality 1.0, Difficulty 5.0, Course: 335, May 2026:
+This is the hardest course in the CCNY CS curriculum; nothing comes close. You can study for a week and fail the exam. This is the course equivalent of a LeetCode hard — you simply have to see the problems beforehand. Averages were around 20%. Most students take him twice — first time to understand, second time to pass. Also, a GPA killer. Have fun! Tags: Tough grader, Test heavy.
+
+Student Review — Quality 5.0, Difficulty 3.0, Course: CSC335, older:
+Best professor I ever had. His class changed the way I think about programming. You have to work incredibly hard but the payoff is real understanding, not just passing a test.
+
+Student Review — Quality 4.0, Difficulty 4.0, Course: CSC335, older:
+Not easy at all but genuinely one of the most intellectually rewarding courses I've taken. Come prepared. Do every reading. Engage in office hours. If you put in the work you will grow as a programmer.
+
+Student Review — Quality 3.0, Difficulty 5.0, Course: CSC335, older:
+His lectures are deep but confusing. The exams are brutal and graded very strictly. If you make one syntax mistake on an exam question you can lose all the points for that question. Study groups help a lot. His homework problems are very similar to exam problems so do them carefully.

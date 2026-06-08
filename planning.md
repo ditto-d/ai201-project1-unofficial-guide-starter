@@ -36,13 +36,18 @@ academic decisions.
 
 ## Chunking Strategy
 
-**Chunk size: 300 words**
+**Chunk size: 200 words**
 
 **Overlap: 50**
 
-**Reasoning: Most documents consist of short student reviews and discussion posts. Smaller
-    chunks help preserve specific opinions about professors, grading, exams, and workload
-    while overlap prevents information from being lost across chunk boundaries.**
+**Reasoning: Most documents consist of short professor reviews, 
+    discussion posts, and course descriptions. Initial testing with 
+    300-word chunks produced only 18 chunks across the corpus, which 
+    reduced retrieval granularity. Reducing the chunk size to 200 words
+    increased the total number of chunks to 31 while preserving sufficient 
+    context through a 50-word overlap. This provides more precise 
+    retrieval of information about professors, grading policies, 
+    workloads, and student experiences.**
 
 ---
 
@@ -52,9 +57,12 @@ academic decisions.
 
 **Top-k: 5**
 
-**Production tradeoff reflection: For a production system I would consider larger 
-    embedding models that provide higher retrieval accuracy and better support for longer 
-    contexts or multiple languages. However, they may increase latency and computational cost.**
+**Production tradeoff reflection: For a production system, I would consider
+    larger embedding models that provide higher retrieval accuracy and stronger 
+    support for longer contexts or multiple languages. However, larger models 
+    increase latency, storage requirements, and computational cost. The all-MiniLM-L6-v2 
+    model provides a good balance between retrieval quality and efficiency for 
+    this project’s relatively small corpus.**
 
 ---
 
@@ -114,10 +122,18 @@ design described in this document.
 **Milestone 3 — Ingestion and chunking:**
 
 I will use Claude Code to generate Python code that loads my collected 
-documents, cleans the text, and splits it into 300-word chunks with a 
+documents, cleans the text, and splits it into 200-word chunks with a 
 50-word overlap. I will provide the Domain, Documents, and Chunking 
 Strategy sections from this planning document and verify that the 
 generated code follows my specified chunking approach.
+
+Results:
+After ingestion and chunking, the corpus consisted of 10 source documents
+and 31 chunks. Diagnostic testing showed no HTML artifacts, no boilerplate text issues, 
+and all chunks passed quality validation checks. Sample chunk inspection confirmed 
+that chunks remained self-contained and preserved meaningful context about
+professors, courses, workload, grading, and student experiences.
+
 
 **Milestone 4 — Embedding and retrieval:**
 
@@ -125,6 +141,15 @@ I will use Claude Code to implement embeddings using the all-MiniLM-L6-v2 model
 and store them in ChromaDB. I will provide the Retrieval Approach section and
 architecture diagram as input. I will verify the implementation by testing 
 queries and checking that the top 5 retrieved chunks are relevant to the user’s question.
+
+Status: COMPLETE
+
+- Embedded 31 document chunks using all-MiniLM-L6-v2
+- Stored embeddings in ChromaDB collection
+- Implemented semantic retrieval
+- Tested retrieval with professor-specific and curriculum-related queries
+- Verified top-k retrieval returns relevant sources
+
 
 **Milestone 5 — Generation and interface:**
 

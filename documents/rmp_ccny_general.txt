@@ -1,0 +1,19 @@
+Rate My Professors: Computer Science Professors at City College of New York
+
+This page lists ratings for Computer Science professors at CCNY based on student reviews.
+
+Michael Grossberg — Computer Science — Overall Quality: 3.6, Would take again: 72%, Difficulty: 3.4 (31 ratings)
+Douglas Troeger — Computer Science — Overall Quality: 1.9, Would take again: 11%, Difficulty: 4.7 (169 ratings)
+William Skeith — Computer Science — Overall Quality: 3.8, Would take again: 72%, Difficulty: 3.9 (131 ratings)
+Nelly Fazio — Computer Science — Limited ratings available
+Akira Kawaguchi — Computer Science — Limited ratings available
+Zhigang Zhu — Computer Science — Limited ratings available
+George Wolberg — Computer Science — Limited ratings available
+Izidor Gertner — Computer Science — Limited ratings available. Known for Systems Security and Automatic Target Recognition research.
+Devendra Kumar — Computer Science — Limited ratings available
+Kaliappa Ravindran — Computer Science — Limited ratings available
+
+General observations from student reviews across CCNY CS professors:
+Students most commonly praise professors who give clear explanations, provide fair and curved exams, keep organized course materials, and are accessible outside class hours. Negative reviews most often cite disorganization, lectures that do not match exam content, very harsh grading with no partial credit, and professors who seem uninterested in student success. Many students note that the quality of instruction varies dramatically between professors teaching the same course. Students consistently recommend checking RateMyProfessor before registering for any section.
+
+The gap between good and bad professors in the CS department is very wide. Some professors are genuinely inspiring and will change how you think about computer science. Others are extremely difficult to follow and the course becomes largely self-taught. Knowing which professor to choose for each course is one of the most important decisions a CS student at CCNY makes. Students share this information informally through Discord servers, class group chats, and word of mouth among upperclassmen.
