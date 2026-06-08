@@ -44,27 +44,14 @@ Overlap: 50 words
 
 ### Why These Choices Fit My Documents
 
-Most of my source documents are short professor reviews, Reddit discussions,
-
-and Quora responses. A 200-word chunk is large enough to preserve context
-
-across multiple reviews while remaining small enough to isolate information
-
-about a specific professor, course, or topic.
-
-I originally experimented with 300-word chunks and 50-word overlap. That
-
-produced only 18 chunks across the corpus, which reduced retrieval quality
-
-because each chunk contained too many unrelated ideas.
-
-Reducing the chunk size to 200 words increased the corpus to 31 chunks,
-
-providing more retrieval candidates while still preserving context.
-
-The 50-word overlap helps maintain continuity when information spans chunk
-
-boundaries and reduces the chance of losing important context.
+Most of my source documents are short professor reviews, Reddit discussions, and Quora responses.
+A 200-word chunk is large enough to preserve context across multiple reviews while remaining small 
+enough to isolate information about a specific professor, course, or topic. I originally experimented
+with 300-word chunks and 50-word overlap. That produced only 18 chunks across the corpus, which 
+reduced retrieval quality because each chunk contained too many unrelated ideas. Reducing the chunk size
+to 200 words increased the corpus to 31 chunks, providing more retrieval candidates while still preserving 
+context. The 50-word overlap helps maintain continuity when information spans chunk boundaries and reduces 
+the chance of losing important context.
 
 Final Chunk Count
 
