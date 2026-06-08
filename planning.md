@@ -9,7 +9,15 @@
 
 ## Domain
 
-<!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+CCNY Computer Science Professor Reviews and Course Advice
+
+This project focuses on student-generated reviews and discussions 
+about CCNY computer science professors and courses. While official 
+course descriptions explain what a course covers, they often do not 
+provide information about teaching style, workload, grading policies, 
+exam difficulty, or student experiences. The goal is to make this 
+unofficial knowledge searchable so students can make more informed 
+academic decisions.
 
 ---
 
@@ -18,18 +26,18 @@
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
-| # | Source | Description | URL or location |
-|---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| # | Source | Description                                                                         | URL or location                                                                                 |
+|---|--------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| 1 | Reddit | How is CCNY when it comes to CS?                                                    | https://www.reddit.com/r/CCNY/comments/1fdtv3f/how_is_city_college_when_it_comes_to_computer/                          |
+| 2 | Quora  | Does CCNY have a good CS program?                                                   | https://www.quora.com/Does-The-City-College-of-New-York-CCNY-have-a-good-computer-science-program-for-undergraduates |
+| 3 | CCNY   | CCNY CS Research                                       v                            | https://www.ccny.cuny.edu/compsci/research?srsltid=AfmBOoqUmFRGYedfufFAEt4HYj4jqxwBVnV4OJqSMr2Z8I7jvAeZ0ykl                             |
+| 4 | Reddit | What is CCNY really like in terms of professors, classes, course load, and grading? | https://www.reddit.com/r/CCNY/comments/1l47u0u/what_is_ccny_really_like_in_terms_of_professors/ |
+| 5 | Reddit | Is City College (CCNY) seriously that bad?                                          |  https://www.reddit.com/r/CUNY/comments/1b501o0/is_city_college_ccny_seriously_that_bad/                                                                                               |
+| 6 | RMP    | Michael Grossberg CCNY                                                              |  https://www.ratemyprofessors.com/professor/854471                                                                                               |
+| 7 | RMP    | Douglas Troeger CCNY                                                                |   https://www.ratemyprofessors.com/professor/432142                                                                                          |
+| 8 | RMP    | CCNY Professors                                                                     |  https://www.ratemyprofessors.com/school/224                                                                                               |
+| 9 | RMP    | William Skeith                                                                      |  https://www.ratemyprofessors.com/professor/1316015                                                                                             |
+| 10 | CCNY   | CCNY Computer Science Catalog                                                       |  https://ccny-undergraduate.catalog.cuny.edu/programs/CMPSC-BS                                                                                               |
 
 ---
 
@@ -40,11 +48,13 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size: 300 words**
 
-**Overlap:**
+**Overlap: 50**
 
-**Reasoning:**
+**Reasoning: Most documents consist of short student reviews and discussion posts. Smaller
+    chunks help preserve specific opinions about professors, grading, exams, and workload
+    while overlap prevents information from being lost across chunk boundaries.**
 
 ---
 
@@ -56,11 +66,13 @@
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model:all-MiniLM-L6-v2**
 
-**Top-k:**
+**Top-k: 5**
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection: For a production system I would consider larger 
+    embedding models that provide higher retrieval accuracy and better support for longer 
+    contexts or multiple languages. However, they may increase latency and computational cost.**
 
 ---
 
@@ -71,13 +83,17 @@
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
-| # | Question | Expected answer |
-|---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| # | Question                                                                                                  | Expected answer |
+|---|-----------------------------------------------------------------------------------------------------------|-----------------|
+| 1 | What do students say about Professor Grossberg’s exams?                                                   |Reviews commonly describe his exams as challenging but fair and emphasize understanding concepts rather than memorization. |
+| 2 | According to student discussions, what preparation is recommended before taking Algorithms at CCNY?       |Students recommend having a strong understanding of data structures and consistent problem-solving practice before taking Algorithms. |
+| 3 | How to do well in Troeger's or Gertner's class?                                                           |Students frequently recommend staying on top of coursework, reviewing lecture material regularly, and seeking clarification early when concepts become difficult. |
+| 4 | What workload concerns do students mention most frequently when discussing CCNY computer science courses? |Students frequently mention heavy workloads, difficult assignments,
+
+challenging exams, and significant time commitments in upper-level
+
+computer science courses. |
+| 5 | Based on student reviews, what factors contribute most to a professor receiving positive ratings?         |Positive ratings are commonly associated with clear explanations, fair grading, organized lectures, and helpful feedback. |
 
 ---
 
@@ -87,9 +103,14 @@
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1.    Student reviews may contain conflicting opinions about the same professor or course. 
+      One student may describe a professor as helpful while another may describe the same
+      professor as difficult, making it challenging to generate balanced answers.
 
-2.
+2.     Retrieval may return irrelevant or incomplete chunks because discussions often 
+       cover multiple topics in the same post. Important information about a professor or 
+       course could be split across chunk boundaries, causing the system to miss relevant 
+       context.
 
 ---
 
